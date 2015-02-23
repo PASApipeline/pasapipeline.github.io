@@ -29,7 +29,7 @@ PASA2 was officially released on June 5th, 2013. PASA2 includes many enhancement
     * <<A_train,  Extraction of ORFs from PASA assemblies (transcriptome-based auto-annotation and/or reference ORFs for training gene predictors) >>
     * <<A_oiaa, Alignment assembly using simple text files as input>>
 - <<A_reference, References>>
-- <<A_MailingLists, Mailing Lists>>
+- <<A_contact_us, Contact us>>
 
 [[A_intro]]
 == Introduction ==
@@ -100,7 +100,7 @@ Sample data and a preconfigured complete PASA pipeline are available for demonst
 [[A_obt_pasa]]
 == Obtaining PASA ==
 
-http://sourceforge.net/projects/pasa[Download] the latest version of the PASA software straight from Sourceforge 
+http://https://github.com/PASApipeline/PASApipeline/releases[Download] the latest version of the PASA software from github.
 
 
 [[A_sii]]
@@ -299,7 +299,7 @@ It usually requires at least two cycles of annotation loading, annotation compar
 
 Illumina RNA-Seq is quickly revolutionizing gene discovery and gene structure annotation in eukaryotes.  Recent enhancements to the PASA pipeline including advancements in RNA-Seq de novo assembly now enable it to make use of these data for gene structure annotation.  It is now relatively straightforward to generate strand-specific RNA-Seq data via Illumina.  Given the great utility of strand-specific data in differentiating between sense and antisense transcription, plus given the great depth of transcriptome sequencing coverage and the great prevalence of antisense transcription,  strand-specific RNA-Seq data is highly preferred by the PASA pipeline.  PASA can still be used quite effectively in the case of non-strand-specific RNA-Seq, but the execution is quite different (see below).  The dUTP strand-specific RNA-Seq method by http://www.ncbi.nlm.nih.gov/pubmed/19620212[Parkhomchuk et al., NAR, 2009] is recommended.  For a comparison of strand-specific methods, see http://www.ncbi.nlm.nih.gov/pubmed/20711195[Comprehensive comparative analysis of strand-specific RNA sequencing methods. by Levin et al, Nat Methods, 2010].
 
-The procedure for leveraging RNA-Seq in the PASA pipeline is very straightforward.  First, assemble the RNA-Seq data using our new http://trinityrnaseq.sf.net[Trinity de novo RNA-Seq assembly software].  The RNA-Seq assembly process can be performed in either a genome-guided (recommended) or genome-free way.  Documentation for Trinity RNA-Seq  assembly (genome-guided or genome-free) is provided at http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html[http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html].  Instructions for assembly of strand-specific and non-strand-specific RNA-Seq are provided.
+The procedure for leveraging RNA-Seq in the PASA pipeline is very straightforward.  First, assemble the RNA-Seq data using our new http://trinityrnaseq.github.io[Trinity de novo RNA-Seq assembly software].  The RNA-Seq assembly process can be performed in either a genome-guided (recommended) or genome-free way.  Documentation for Trinity RNA-Seq  assembly (genome-guided or genome-free) is provided at http://trinityrnaseq.github.io/#genome_guided[http://trinityrnaseq.github.io/#genome_guided].  Instructions for assembly of strand-specific and non-strand-specific RNA-Seq are provided.
 
 === Strand-specific RNA-Seq ===
 
@@ -340,7 +340,7 @@ Depending on the genome and transcriptome samples under study, the genome may pr
 
 The transcripts are identified and included along with the PASA assemblies yielding a more comprehensive transcriptome database, to be used for downstream investigations into expressed gene content and differential expression analyses.
 
-Our system for building the comprehensive transcriptome database requires multiple sources of inputs: 1. http://trinityrnaseq.sf.net[Trinity de novo] RNA-Seq assemblies (ex. Trinity.fasta), 2. http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html[Trinity genome-guided] RNA-Seq assemblies (ex. Trinity.GG.fasta), and (optionally) 3. http://cufflinks.cbcb.umd.edu/[Cufflinks] transcript structures (ex. cufflinks.gtf).
+Our system for building the comprehensive transcriptome database requires multiple sources of inputs: 1. http://trinityrnaseq.github.io[Trinity de novo] RNA-Seq assemblies (ex. Trinity.fasta), 2. http://trinityrnaseq.github.io/genome_guided_trinity.html[Trinity genome-guided] RNA-Seq assemblies (ex. Trinity.GG.fasta), and (optionally) 3. http://cufflinks.cbcb.umd.edu/[Cufflinks] transcript structures (ex. cufflinks.gtf).
 
 [NOTE]
 When applying Trinity to RNA-Seq samples derived from microbial eukaryotes, using either genome-free or genome-guided de novo assembly, be sure to use the '--jaccard_clip' parameter to reduce the occurrence of falsely-fused genome-neighboring transcripts.  Also, only include Cufflinks transcripts if applying the approach to expansive genomes of animals such as mouse or human, and exclude Cufflinks from application to compact microbial eukaryotic genomes.
@@ -656,10 +656,9 @@ Earlier work involving the incorporation of RNA-Seq data into gene structure ann
 - Rhind, et al. (2011) Comparative Functional Genomics of the Fission Yeasts. http://www.ncbi.nlm.nih.gov/pubmed/21511999[Science. 2011 Apr 21].
 - Haas, et al. (2011) Approaches to Fungal Genome Annotation http://www.ncbi.nlm.nih.gov/pubmed/22059117[Mycology. 2011 Oct 3;2(3):118-141.]
 
-[[A_MailingLists]]
-== Mailing Lists ==
+[[A_contact_us]]
+== Contact Us  ==
 
-- https://lists.sourceforge.net/lists/listinfo/pasa-announce[pasa-announce@lists.sourceforge.net] for announcements regarding new software releases and related notifications.
+Questions, suggestions, comments, etc?
 
-- https://lists.sourceforge.net/lists/listinfo/pasa-help[pasa-help@lists.sourceforge.net] for questions and help from the PASA user community.
-
+Join and add discussions at the PASA pipeline users google group: https://groups.google.com/forum/\#!forum/pasapipeline-users[https://groups.google.com/forum/#!forum/pasapipeline-users]

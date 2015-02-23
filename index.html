@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>Gene Structure Annotation and Analysis Using PASA</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -94,7 +94,9 @@ ul > li > * { color: black; }
   padding: 0;
   margin: 0;
 }
-
+pre {
+  white-space: pre-wrap;
+}
 
 #author {
   color: #527bbd;
@@ -223,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -846,7 +848,7 @@ Other useful applications:
 </li>
 <li>
 <p>
-<a href="#A_MailingLists">Mailing Lists</a>
+<a href="#A_contact_us">Contact us</a>
 </p>
 </li>
 </ul></div>
@@ -1062,7 +1064,7 @@ At any time, regardless of any existing annotations, users can obtain candidate 
 <div class="sect1">
 <h2 id="A_obt_pasa">Obtaining PASA</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><a href="http://sourceforge.net/projects/pasa">Download</a> the latest version of the PASA software straight from Sourceforge</p></div>
+<div class="paragraph"><p><a href="http://https://github.com/PASApipeline/PASApipeline/releases">Download</a> the latest version of the PASA software from github.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1364,7 +1366,7 @@ the valid alignments are clustered into piles based on genome alignment position
 <h2 id="A_RNASeq">Leveraging RNA-Seq by the PASA Pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Illumina RNA-Seq is quickly revolutionizing gene discovery and gene structure annotation in eukaryotes.  Recent enhancements to the PASA pipeline including advancements in RNA-Seq de novo assembly now enable it to make use of these data for gene structure annotation.  It is now relatively straightforward to generate strand-specific RNA-Seq data via Illumina.  Given the great utility of strand-specific data in differentiating between sense and antisense transcription, plus given the great depth of transcriptome sequencing coverage and the great prevalence of antisense transcription,  strand-specific RNA-Seq data is highly preferred by the PASA pipeline.  PASA can still be used quite effectively in the case of non-strand-specific RNA-Seq, but the execution is quite different (see below).  The dUTP strand-specific RNA-Seq method by <a href="http://www.ncbi.nlm.nih.gov/pubmed/19620212">Parkhomchuk et al., NAR, 2009</a> is recommended.  For a comparison of strand-specific methods, see <a href="http://www.ncbi.nlm.nih.gov/pubmed/20711195">Comprehensive comparative analysis of strand-specific RNA sequencing methods. by Levin et al, Nat Methods, 2010</a>.</p></div>
-<div class="paragraph"><p>The procedure for leveraging RNA-Seq in the PASA pipeline is very straightforward.  First, assemble the RNA-Seq data using our new <a href="http://trinityrnaseq.sf.net">Trinity de novo RNA-Seq assembly software</a>.  The RNA-Seq assembly process can be performed in either a genome-guided (recommended) or genome-free way.  Documentation for Trinity RNA-Seq  assembly (genome-guided or genome-free) is provided at <a href="http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html">http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html</a>.  Instructions for assembly of strand-specific and non-strand-specific RNA-Seq are provided.</p></div>
+<div class="paragraph"><p>The procedure for leveraging RNA-Seq in the PASA pipeline is very straightforward.  First, assemble the RNA-Seq data using our new <a href="http://trinityrnaseq.github.io">Trinity de novo RNA-Seq assembly software</a>.  The RNA-Seq assembly process can be performed in either a genome-guided (recommended) or genome-free way.  Documentation for Trinity RNA-Seq  assembly (genome-guided or genome-free) is provided at <a href="http://trinityrnaseq.github.io/#genome_guided">http://trinityrnaseq.github.io/#genome_guided</a>.  Instructions for assembly of strand-specific and non-strand-specific RNA-Seq are provided.</p></div>
 <div class="sect2">
 <h3 id="_strand_specific_rna_seq">Strand-specific RNA-Seq</h3>
 <div class="paragraph"><p>In the case of <strong>strand-specific RNA-Seq</strong>, run PASA with the Trinity transcript assemblies as input, including the <em>--transcribed_is_aligned_orient</em> parameter, to indicate that the Trinity transcripts were directionally assembled:</p></div>
@@ -1421,7 +1423,7 @@ Capture transcripts that cannot otherwise be represented properly according to t
 </li>
 </ul></div>
 <div class="paragraph"><p>The transcripts are identified and included along with the PASA assemblies yielding a more comprehensive transcriptome database, to be used for downstream investigations into expressed gene content and differential expression analyses.</p></div>
-<div class="paragraph"><p>Our system for building the comprehensive transcriptome database requires multiple sources of inputs: 1. <a href="http://trinityrnaseq.sf.net">Trinity de novo</a> RNA-Seq assemblies (ex. Trinity.fasta), 2. <a href="http://trinityrnaseq.sourceforge.net/genome_guided_trinity.html">Trinity genome-guided</a> RNA-Seq assemblies (ex. Trinity.GG.fasta), and (optionally) 3. <a href="http://cufflinks.cbcb.umd.edu/">Cufflinks</a> transcript structures (ex. cufflinks.gtf).</p></div>
+<div class="paragraph"><p>Our system for building the comprehensive transcriptome database requires multiple sources of inputs: 1. <a href="http://trinityrnaseq.github.io">Trinity de novo</a> RNA-Seq assemblies (ex. Trinity.fasta), 2. <a href="http://trinityrnaseq.github.io/genome_guided_trinity.html">Trinity genome-guided</a> RNA-Seq assemblies (ex. Trinity.GG.fasta), and (optionally) 3. <a href="http://cufflinks.cbcb.umd.edu/">Cufflinks</a> transcript structures (ex. cufflinks.gtf).</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -1840,27 +1842,17 @@ Haas, et al. (2011) Approaches to Fungal Genome Annotation <a href="http://www.n
 </div>
 </div>
 <div class="sect1">
-<h2 id="A_MailingLists">Mailing Lists</h2>
+<h2 id="A_contact_us">Contact Us</h2>
 <div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="https://lists.sourceforge.net/lists/listinfo/pasa-announce">pasa-announce@lists.sourceforge.net</a> for announcements regarding new software releases and related notifications.
-</p>
-</li>
-<li>
-<p>
-<a href="https://lists.sourceforge.net/lists/listinfo/pasa-help">pasa-help@lists.sourceforge.net</a> for questions and help from the PASA user community.
-</p>
-</li>
-</ul></div>
+<div class="paragraph"><p>Questions, suggestions, comments, etc?</p></div>
+<div class="paragraph"><p>Join and add discussions at the PASA pipeline users google group: <a href="https://groups.google.com/forum/#!forum/pasapipeline-users">https://groups.google.com/forum/#!forum/pasapipeline-users</a></p></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-06-06 08:54:41 EDT
+Last updated 2015-02-23 10:17:35 EST
 </div>
 </div>
 </body>
