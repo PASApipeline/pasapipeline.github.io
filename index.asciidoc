@@ -100,7 +100,7 @@ Sample data and a preconfigured complete PASA pipeline are available for demonst
 [[A_obt_pasa]]
 == Obtaining PASA ==
 
-http://https://github.com/PASApipeline/PASApipeline/releases[Download] the latest version of the PASA software from github.
+https://github.com/PASApipeline/PASApipeline/releases[Download] the latest version of the PASA software from github.
 
 
 [[A_sii]]
