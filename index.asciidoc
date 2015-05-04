@@ -124,7 +124,7 @@ In addition to the PASA software obtained here, you will need the following:
 - Bioinformatics Tools:
      * Tom Wu's http://research-pub.gene.com/gmap/[GMAP] cdna alignment utility.
      * Jim Kent's http://hgwdev.cse.ucsc.edu/~kent/src/blatSrc35.zip[BLAT] aligner
-     * Bill Pearson's http://faculty.virginia.edu/wrpearson/fasta/fasta3/CURRENT.tar.gz[FASTA] general sequence alignment utility.   Note that the fasta utility is bundled with other utilites as part of the Fasta3 suite.  The fasta utility (ie. named fasta35) should be renamed (or symlinked to) 'fasta'.  This utility is required for annotation comparisons, but not needed for alignment assembly or alt-splicing analysis.
+     * Bill Pearson's http://faculty.virginia.edu/wrpearson/fasta/CURRENT/fasta-36.3.7a.tar.gz[FASTA] general sequence alignment utility.   Note that the fasta utility is bundled with other utilites as part of the Fasta3 suite.  The fasta utility (ie. named fasta35) should be renamed (or symlinked to) 'fasta'.  This utility is required for annotation comparisons, but not needed for alignment assembly or alt-splicing analysis.
 
 
 [NOTE]
